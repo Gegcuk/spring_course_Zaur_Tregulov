@@ -1,14 +1,8 @@
 package ru.gegcuk.spring_introduction;
 
-//@Component
-public class Dog implements Pet {
-    public Dog(){
-        System.out.println("Dog creating...\n");
-    }
-
-
+public class Dog implements Pet{
     @Override
     public void say(){
-        System.out.println("Wow!");
+        System.out.println("Wow-wow");
     }
 }
