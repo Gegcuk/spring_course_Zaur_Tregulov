@@ -3,6 +3,6 @@ package ru.gegcuk.spring_introduction;
 public class Dog implements Pet{
     @Override
     public void say(){
-        System.out.println("Wow-wow");
+        System.out.println("Woof-woof");
     }
 }
