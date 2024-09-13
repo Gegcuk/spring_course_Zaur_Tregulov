@@ -11,12 +11,8 @@
 
 
     <bean id = "myPet"
-          class = "ru.gegcuk.spring_introduction.Cat">
+          class = "ru.gegcuk.spring_introduction.Dog"
+            scope="prototype">
     </bean>
-    <bean id = "myPerson"
-          class = "ru.gegcuk.spring_introduction.Person">
-        <property name="pet" ref="myPet"/>
-        <property name="age" value="${person.age}"/>
-        <property name="lastName" value="${person.lastName}"/>
-    </bean>
+
 </beans>
