@@ -2,10 +2,9 @@ package ru.gegcuk.spring_introduction;
 
 import org.springframework.stereotype.Component;
 
-@Component("catBean")
-public class Cat implements Pet{
-
-    public Cat(){
+//@Component("catBean")
+public class Cat implements Pet {
+    public Cat() {
         System.out.println("Cat is created.");
     }
 
@@ -14,3 +13,4 @@ public class Cat implements Pet{
         System.out.println("Mew-mew");
     }
 }
+
