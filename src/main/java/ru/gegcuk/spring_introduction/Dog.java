@@ -1,8 +1,21 @@
 package ru.gegcuk.spring_introduction;
 
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Component;
+
+@Component
+@Scope("prototype")
 public class Dog implements Pet{
 
     private String name;
+
+    public void init(){
+        System.out.println("Class Dog: init method");
+    }
+
+    public void destroy(){
+        System.out.println("Class Dog: destroy method");
+    }
 
     public Dog(){
         System.out.println("Dog is created");
