@@ -12,6 +12,22 @@ public class UniLibrary extends AbstractLibrary {
     }
 
     public void getMagazine(){
-        System.out.println("getBook in UniLibrary");
+        System.out.println("getMagazine in UniLibrary");  // Fixed typo here
+    }
+
+    public void returnBook(){
+        System.out.println("returnBook in UniLibrary");
+    }
+
+    public void returnMagazine(){
+        System.out.println("returnMagazine in UniLibrary");
+    }
+
+    public void addBook(){
+        System.out.println("addBook in UniLibrary");  // Fixed typo here
+    }
+
+    public void addMagazine(){
+        System.out.println("addMagazine in UniLibrary");
     }
 }
