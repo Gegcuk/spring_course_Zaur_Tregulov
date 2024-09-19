@@ -14,10 +14,12 @@ public class Test1 {
                 .addAnnotatedClass(Employee.class)
                 .buildSessionFactory()) {
             Session session = factory.getCurrentSession();
-            Employee employee = new Employee("Aleksei", "Lazunin", "Product manager", 200000);
+            Employee employee = new Employee("Sergey", "Ivanov", "IT", 250000);
+            System.out.println(employee);
             session.beginTransaction();
             session.persist(employee);
             session.getTransaction().commit();
+            System.out.println(employee);
         }
     }
 }
