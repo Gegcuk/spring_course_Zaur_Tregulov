@@ -22,6 +22,7 @@ public class University {
     }
 
     public List<Student> getStudents() {
+        System.out.println(students.get(3));
         return students;
     }
 }

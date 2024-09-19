@@ -9,20 +9,20 @@ import org.springframework.stereotype.Component;
 @Aspect
 public class LoggingAndSecurityAspect {
 
-    @Pointcut("execution(* ru.gegcuk.aop.UniLibrary.*(..))")
-    private void allMethodsInUniLibrary() {}
-
-    @Pointcut("execution(public void ru.gegcuk.aop.UniLibrary.returnMagazine())")
-    private void returnMagazineInUniLibrary() {}
-
-    @Pointcut("allMethodsInUniLibrary() && !returnMagazineInUniLibrary()")
-    private void allMethodsExceptReturnMagazineInUniLibrary() {}
-
-
-    @Before("allMethodsExceptReturnMagazineInUniLibrary()")
-    public void beforeAllMethodsExceptReturnMagazineInUniLibrary(){
-        System.out.println("beforeAllMethodsExceptReturnMagazineInUniLibrary: logging #4");
-    }
+//    @Pointcut("execution(* ru.gegcuk.aop.UniLibrary.*(..))")
+//    private void allMethodsInUniLibrary() {}
+//
+//    @Pointcut("execution(public void ru.gegcuk.aop.UniLibrary.returnMagazine())")
+//    private void returnMagazineInUniLibrary() {}
+//
+//    @Pointcut("allMethodsInUniLibrary() && !returnMagazineInUniLibrary()")
+//    private void allMethodsExceptReturnMagazineInUniLibrary() {}
+//
+//
+//    @Before("allMethodsExceptReturnMagazineInUniLibrary()")
+//    public void beforeAllMethodsExceptReturnMagazineInUniLibrary(){
+//        System.out.println("beforeAllMethodsExceptReturnMagazineInUniLibrary: logging #4");
+//    }
 
 //    @Before("returnMagazineInUniLibrary()")
 //    public void beforeReturnMagazineInUniLibrary(){

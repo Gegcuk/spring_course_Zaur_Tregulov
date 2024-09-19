@@ -15,8 +15,9 @@ public class UniLibrary extends AbstractLibrary {
         System.out.println("getMagazine in UniLibrary");  // Fixed typo here
     }
 
-    public void returnBook(){
+    public String returnBook(){
         System.out.println("returnBook in UniLibrary");
+        return "The war and the piece";
     }
 
     public void returnMagazine(){

@@ -1,8 +1,6 @@
 package ru.gegcuk.aop.aspects;
 
-import org.aspectj.lang.annotation.AfterReturning;
-import org.aspectj.lang.annotation.Aspect;
-import org.aspectj.lang.annotation.Before;
+import org.aspectj.lang.annotation.*;
 import org.springframework.stereotype.Component;
 import ru.gegcuk.aop.Student;
 
@@ -22,4 +20,10 @@ public class UniversityLoggingAspect {
         System.out.println(students.get(1));
         System.out.println(" afterReturningGetStudentsLoggingAdvice : logging of students after getStudents" );
     }
+
+    @AfterThrowing("execution(* getStudents())")
+    public void afterThrowingGetStudents(){
+        System.out.println("afterThrowingGetStudents logged");
+    }
+
 }
