@@ -5,25 +5,24 @@ import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 import ru.gegcuk.hibernate_test.Entity.Employee;
 
-public class Test2 {
+public class Test4 {
     public static void main(String[] args) {
         try(SessionFactory factory = new Configuration()
                 .configure("hibernate.cfg.xml")
                 .addAnnotatedClass(Employee.class)
                 .buildSessionFactory()){
             Session session = factory.getCurrentSession();
-            Employee employee = new Employee("Oleg", "Sidorov", "HR", 255000);
             session.beginTransaction();
-            session.persist(employee);
-//            session.getTransaction().commit();
 
-            int id = employee.getId();
-//            session = factory.getCurrentSession();
-//            session.beginTransaction();
-            Employee employee2 = session.get(Employee.class, id);
+            Employee employee = session.get(Employee.class, 5);
+            employee.setSalary(170000);
+
+            session.createMutationQuery("update Employee e set e.salary = :salary where e.name = :name")
+                    .setParameter("salary", 277777)
+                    .setParameter("name", "Sergey")
+                    .executeUpdate();
+
             session.getTransaction().commit();
-
-            System.out.println(employee2);
         }
     }
 }
