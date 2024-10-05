@@ -12,8 +12,7 @@ public class Test1 {
                 .configure("hibernate.cfg.xml")
                 .addAnnotatedClass(Employee.class)
                 .addAnnotatedClass(Detail.class)
-                .buildSessionFactory()){
-            Session session = factory.getCurrentSession();
+                .buildSessionFactory(); Session session = factory.getCurrentSession()){
 //            Employee employee = new Employee("Anna", "Lazunina", "Finance", 250000);
 //            Detail detail = new Detail("London", "123456712", "anna@gmail.com");
 //            employee.setEmpDetail(detail);
